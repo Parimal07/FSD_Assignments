@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="submit"]{
+            margin-top: 10px;
+            width: 95%; 
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+    
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 80%;
+            margin-left: 35px;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        datalist {
+            margin-left: 10px;
+            width: 90%; 
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        input[list] {
+            width: 95%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <form action="welcome.php" method="post">
+        <label for="name">Enter Name:</label>
+        <input type="text" name="name" id="name">
+
+        <!-- Replace the "Select School" field with a datalist input -->
+        <label for="school">Select School:</label>
+        <input list="schools" id="school" name="school">
+        <datalist id="schools">
+            <option value="School of Computer Science">SCET</option>
+            <option value="School of Mechanical">SOM</option>
+            <option value="School of Electronics">SOE</option>
+            <option value="School of Civil">SOC</option>
+        </datalist>
+
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <!-- Replace the "State" field with a datalist input -->
+        <label for="state">State:</label>
+        <input list="states" id="state" name="state">
+        <datalist id="states">
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+        </datalist>
+
+        <!-- Replace the "City" field with a datalist input -->
+        <label for="city">City:</label>
+        <input list="cities" id="city" name="city">
+        <datalist id="cities">
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Bhopal">Bhopal</option>
+        </datalist>
+
+        <label for="country">Country:</label>
+        <input disabled="disabled" type="text" name="country" value="India">
+
+        <label for="pincode">Pin Code:</label>
+        <input type="tel" id="pincode" name="pincode" pattern="[0-9]{6}">
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

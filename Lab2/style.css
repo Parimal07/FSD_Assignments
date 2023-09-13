@@ -1,0 +1,112 @@
+body {
+    background-color: #ddd;
+  }
+  
+  header {
+    /* background-color: aliceblue; */
+    background-color: #35495e;
+    color: #fff;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 15px;
+  }
+  /* Reset default margins and padding */
+body,h1, h2, p, a, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a default font family and line height */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Add spacing to the header and main container */
+.header{
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-container {
+  text-align: center;
+  padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.header h1 {
+  color: #ddd;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Style the aside */
+.aside {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin: 20px;
+}
+
+.aside h2 {
+  color: #35495e;
+  margin-bottom: 1rem;
+}
+
+/* Style the links in the aside */
+.aside a {
+  color: #35495e;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.projects {
+  margin-top: 60px;
+  margin-left: 0%;
+}
+/* Style the projects section */
+.projects table {
+  margin-left: 5%;
+}
+
+#projects{
+  margin-left: 20%;
+  text-align: left;
+}
+
+.projects th, .projects td {
+  padding: 1rem;
+  text-align: center;
+}
+
+.projects th h3 {
+  color: #35495e;
+  margin-bottom: 0.5rem;
+}
+
+/* Style the images */
+.projects img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style the footer */
+footer {
+  background-color: #35495e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+video{
+  margin-top: 0.5rem;
+}

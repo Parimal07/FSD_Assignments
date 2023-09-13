@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Simple HTML Website</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: lightblue;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 180px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		.firstsection {
+			background-color: rgb(197, 228, 157);
+			height: 400px;
+		}
+
+		.secondsection {
+			background-color: rgb(145, 252, 242);
+			height: 400px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 5px;
+		}
+
+		.secondhalf {
+			width: 30%;
+			margin: 5px;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+		
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<li><a href="#web">Web Technology</a></li>
+			<li><a href="#program">C Programming</a></li>
+			<li><a href="#java">Java</a></li>
+		</ul>
+
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="web">Web Technology</h1>
+				<p class="text-small">
+					HTML stands for HyperText Markup Language.
+					It is used to design web pages using a markup
+					language. HTML is the combination of Hypertext
+					and Markup language. Hypertext defines the
+					link between the web pages. A markup language
+					is used to define the text document within tag
+					which defines the structure of web pages.
+					HTML is a markup language that is used by the
+					browser to manipulate text, images, and other
+					content to display it in the required format.
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="program">
+					C Programming
+				</h1>
+				<p class="text-small">
+					C is a procedural programming language. It
+					was initially developed by Dennis Ritchie
+					as a system programming language to write
+					operating system. The main features of C
+					language include low-level access to memory,
+					simple set of keywords, and clean style,
+					these features make C language suitable for
+					system programming like operating system or
+					compiler development.
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="paras">
+			<h1 class="sectionTag text-big" id="java">Java</h1>
+
+			<p class="sectionSubTag text-small">
+				Java has been one of the most popular
+				programming language for many years.
+				Java is Object Oriented. However it is
+				not considered as pure object oriented
+				as it provides support for primitive
+				data types (like int, char, etc) The
+				Java codes are first compiled into byte
+				code (machine independent code). Then
+				the byte code is run on Java Virtual
+				Machine (JVM) regardless of the
+				underlying architecture.
+			</p>
+
+
+		</div>
+
+		<div class="thumbnail">
+			<img src= "img.png" alt="laptop image">
+		</div>
+	</section>
+
+	<footer class="background">
+		<p class="text-footer">
+			
+		</p>
+
+
+	</footer>
+</body>
+
+</html>
