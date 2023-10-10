@@ -17,7 +17,7 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 $city = $_POST['city'];
 
-$sql = "INSERT INTO enquiry VALUES ('$name','$phone','$email,'$city','$message')";
+$sql = "INSERT INTO enquiry VALUES ('$name',$phone,'$email','$city','$message')";
 if ($conn->query($sql) == True) {
     echo ("Successfully Entered Data");
 } else {
