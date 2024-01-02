@@ -7,10 +7,9 @@ $database = 'servlink';
 $conn = new mysqli($servername, $username, $password, $database);
 
 if ($conn->connect_error) {
-    die("Connection error : " . $conn->connect_error);
+    die("Connection error: " . $conn->connect_error);
 }
 
-// Assuming you have a table named 'enquiry'
 $sql = "SELECT * FROM enquiry";
 $result = $conn->query($sql);
 
@@ -32,6 +31,10 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["email"] . "</td>";
         echo "<td>" . $row["city"] . "</td>";
         echo "<td>" . $row["message"] . "</td>";
+        echo "<td>";
+        echo "<button onclick='editData(\"" . $row["email"] . "\", \"" . $row["name"] . "\", \"" . $row["phone"] . "\", \"" . $row["city"] . "\", \"" . $row["message"] . "\")'>Edit</button>";
+        echo "<button onclick='deleteData(\"" . $row["email"] . "\")'>Delete</button>";
+        echo "</td>";
         echo "</tr>";
     }
 

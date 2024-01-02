@@ -98,7 +98,8 @@
         function validateForm() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
-            var msg =document.getElementById("message").value;
+            var message = document.getElementById("message").value;
+            var city = document.getElementById("city").value;
 
             // Simple name validation (non-empty)
             if (name.trim() === "") {
@@ -119,8 +120,25 @@
                 return false;
             }
 
+            // Check if message is not empty
             if (message.trim() === "") {
                 alert("Enquiry should not be empty!");
+                return false;
+            }
+
+            // Check if the selected city is in the datalist
+            var validCities = document.getElementById("cities").options;
+            var isValidCity = false;
+
+            for (var i = 0; i < validCities.length; i++) {
+                if (validCities[i].value === city) {
+                    isValidCity = true;
+                    break;
+                }
+            }
+
+            if (!isValidCity) {
+                alert("Please select a valid city from the list.");
                 return false;
             }
 

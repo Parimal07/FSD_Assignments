@@ -24,7 +24,7 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            margin-top: 20px; /* Add margin to create spacing */
+            margin-top: 20px;
         }
         table {
             width: 100%;
@@ -60,6 +60,30 @@
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
+        
+        function editData(email, name, phone, city, message) {
+            // Extract the data from the row and encode it as a query parameter
+            var dataToEdit = `name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&email=${encodeURIComponent(email)}&city=${encodeURIComponent(city)}&message=${encodeURIComponent(message)}`;
+            
+            // Redirect to the edit_form.html page with the data as a query parameter
+            window.location.href = `edit_form.html?${dataToEdit}`;
+        }
+
+        function deleteData(email) {
+            fetch('delete_data.php?email=' + email)
+                .then(response => response.json()) // Parse the response as JSON
+                .then(data => {
+                    if (data.status === "success") {
+                        alert(data.message); 
+                        location.reload();
+                    } else {
+                        alert(data.message); 
+                    }
+                })
+                .catch(error => {
+                    console.error('Error deleting data:', error);
+                });
+        }
     </script>
 </body>
 </html>

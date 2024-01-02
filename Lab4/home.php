@@ -1,4 +1,6 @@
 <?php
+// After processing the form data, add this line to redirect to responses.html
+header("Location: responses.html");
 $servername = 'localhost';
 $username = 'root';
 $password = '';

@@ -3,102 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ServLink</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    
+        form {
+            width: 400px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+            display: block;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="submit"] {
+            margin-top: 10px;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #555;
+        }
+    
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="password"]:hover,
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="tel"]:hover,
+        input[type="submit"]:hover {
+            border: 1px solid #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <nav class="navbar" style="background-color: #e3f2fd;">
-        <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand d-flex align-items-center" href="#" style="font-size: 30px; font-family: 'Times New Roman', Times, serif;">
-                <img src="/Lab3/logo.png" alt="Logo" width="38" height="32" class="d-inline-block align-text-top">
-                ServLink
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-target="#navbarDropdown" aria-expanded="false">
-                            Our Services
-                        </a>
-                        <ul class="dropdown-menu" id="navbarDropdown">
-                            <li><a class="dropdown-item" href="frontend.html">Frontend Development</a></li>
-                            <li><a class="dropdown-item" href="#">Web Design</a></li>
-                            <li><a class="dropdown-item" href="#">Backend Development</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-    </nav>
-    
-    <div class="card Intro m-4">
-        <div class="card-body">
-            <h4 class="card-title">Welcome to our Web Services Hub!</h4>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" pattern="[A-Za-z ]+" title="Only alphabets and spaces are allowed" required>
 
-            <p class="card-text" style="text-indent: 25px;margin-left: 20px">Unlock the power of seamless digital integration with our cutting-edge Web Services platform. Whether you're a developer seeking to harness the potential of APIs or a business aiming to enhance connectivity, our platform is your gateway to a world of limitless possibilities.</p>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
 
-            <li class="card-text mb-2"><b>Explore Our Features:</b></li>
-            <p class="card-text" style="text-indent: 25px;margin-left: 20px">Discover a wide array of APIs and services designed to elevate your digital projects. From real-time data exchange to streamlined communication between applications, our platform offers a diverse range of tools to suit your needs.</p>
-            
-            <li class="card-text mb-2"><b>Simplify Integration:</b></li>
-            <p class="card-text" style="text-indent: 25px;margin-left: 20px">Gone are the days of complex integration processes. Our user-friendly interface and comprehensive documentation empower you to effortlessly incorporate powerful web services into your projects. Experience the true meaning of plug-and-play integration.</p>
-            
-            <li class="card-text mb-2"><b>Enhance Efficiency:</b></li>
-            <p class="card-text" style="text-indent: 25px;margin-left: 20px">Boost your application's efficiency by tapping into our high-performance web services. Seamlessly exchange information, automate processes, and optimize workflows to stay ahead in today's fast-paced digital landscape.</p>
-            
-            <li class="card-text mb-2"><b>Reliable Support:</b></li>
-            <p class="card-text" style="text-indent: 25px;margin-left: 20px">Embark on your web services journey with confidence, knowing that our dedicated support team is here to assist you every step of the way. From implementation to troubleshooting, we're committed to ensuring your success.</p>
-        </div>
-    </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <h3 style="text-align:center;margin-bottom: 1rem;">Our Projects</h3>
-<div class="d-flex justify-content-center">
-    <div class="row">
-        <div class="col-md-6 mb-3 d-flex align-items-center justify-content-end">
-            <div class="card" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4 align-self-center image-col text-end">
-                        <img src="web.webp" class="img-fluid rounded-start" style="max-width: 80%; height: auto;" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h4 class="card-title"><a href = "/Lab3/project1.html">Project 1</a></h4>
-                            <p class="card-text"> <b>Website Redesign :</b> The project focused on a strategic redesign process that encompassed refining layout, aesthetics, and responsiveness for a modern and engaging user experience.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3 d-flex align-items-center justify-content-end">
-            <div class="card" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4 align-self-center image-col text-end">
-                        <img src="cart.webp" class="img-fluid rounded-start" style="max-width: 80%; height: auto;" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h4 class="card-title"><a href = "/Lab3/project2.html">Project 2</a></h4>
-                            <p class="card-text"><b>Ecommerce-Platform :</b> A versatile online marketplace enabling businesses to efficiently showcase and sell products, featuring intuitive navigation, secure payments, and customer support.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
 
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[@$#&]).{7,}" 
+            title="Password must be at least 7 characters long and contain at least one uppercase letter, one digit, and one special character from &,$,#@" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Name validation (text only)
+            if (!/^[A-Za-z ]+$/.test(name)) {
+                alert("Invalid name. Only alphabets and spaces are allowed.");
+                return false;
+            }
+
+            // Simple username validation (non-empty)
+            if (username.trim() === "") {
+                alert("Username cannot be empty");
+                return false;
+            }
+
+            // Email validation
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/.test(email)) {
+                alert("Invalid email address. Please enter a valid email.");
+                return false;
+            }
+
+            // Phone number validation (10 digits)
+            if (!/^[0-9]{10}$/.test(phone)) {
+                alert("Invalid phone number. Please enter a 10-digit number.");
+                return false;
+            }
+
+            // Password validation
+            if (!/(?=.*[A-Z])(?=.*\d)(?=.*[@$#&]).{7,}/.test(password)) {
+                alert("Invalid password. Password must be at least 7 characters long and contain at least one uppercase letter, one digit, and one special character from &,$,#@");
+                return false;
+            }
+
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // If all validations pass, you can submit the form
+            alert("Form submitted.");
+            window.location.reload();
+            return false; // Prevents the default form submission
+        }
+    </script>    
 </body>
 </html>
